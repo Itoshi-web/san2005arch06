@@ -1,16 +1,10 @@
-import { Powerup, GamePlayer } from '../types/game';
-
 export const POWERUP_COOLDOWN = 2; // turns
 
-export function canUsePowerup(player: GamePlayer, currentTurn: number): boolean {
+export function canUsePowerup(player, currentTurn) {
   return currentTurn - player.lastPowerupUsed >= POWERUP_COOLDOWN;
 }
 
-export function applyPowerup(
-  targetPlayer: GamePlayer,
-  targetCell: number,
-  powerupType: Powerup['type']
-): GamePlayer {
+export function applyPowerup(targetPlayer, targetCell, powerupType) {
   const updatedPlayer = { ...targetPlayer };
   
   switch (powerupType) {
