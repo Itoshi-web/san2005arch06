@@ -20,7 +20,7 @@ const httpServer = createServer(app);
 const io = new Server(httpServer, {
   cors: {
     origin: process.env.NODE_ENV === 'production'
-      ? ['https://delicate-marigold-288ce7.netlify.app']
+      ? ['https://singular-melba-6796d6.netlify.app']
       : ['http://localhost:5173'],
     methods: ['GET', 'POST'],
   },
