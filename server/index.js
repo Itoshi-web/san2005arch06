@@ -7,8 +7,8 @@ import cors from 'cors';
 import 'dotenv/config';
 import { canUsePowerup, applyPowerup } from './game/powerups';
 import { initializeTurn, checkTurnTimeout, processTurnEnd } from './game/turnManager';
-import { processConsecutiveRolls } from '../src/game/mechanics/eventSystem';
-import { checkDominantPlayer, applySurvivalBoost } from '../src/game/mechanics/balancing';
+import { processConsecutiveRolls } from './game/eventSystem';
+import { checkDominantPlayer, applySurvivalBoost } from './game/balancing';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
