@@ -1,4 +1,4 @@
-import { GameEvent } from '../../types/game';
+import { GameEvent } from '../types/game';
 
 export const EVENT_PROBABILITIES = {
   fastGrowth: 0.15,    // 15% chance
