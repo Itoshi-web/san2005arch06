@@ -1,6 +1,8 @@
+import { GameState } from '../types/game';
+
 const TURN_DURATION = 30000; // 30 seconds
 
-export function initializeTurn(gameState) {
+export function initializeTurn(gameState: GameState): GameState {
   return {
     ...gameState,
     turnStartTime: Date.now(),
@@ -8,12 +10,12 @@ export function initializeTurn(gameState) {
   };
 }
 
-export function checkTurnTimeout(gameState) {
+export function checkTurnTimeout(gameState: GameState): boolean {
   const elapsed = Date.now() - gameState.turnStartTime;
   return elapsed >= TURN_DURATION;
 }
 
-export function processTurnEnd(gameState) {
+export function processTurnEnd(gameState: GameState): GameState {
   // Process powerup durations
   const updatedPlayers = gameState.players.map(player => ({
     ...player,
